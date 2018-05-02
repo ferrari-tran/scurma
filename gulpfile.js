@@ -31,7 +31,6 @@ gulp.task('sass', function() {
       browsers: ['last 2 versions']
     }))
     .pipe(gulp.dest('app/css'))
-    .pipe(gulp.dest('app/dist/css'))
 });
 
 gulp.task('criticalCSS', () => {
