@@ -1,16 +1,8 @@
 {
-  "name": "FE starter",
-  "version": "1.1",
-  "description": "",
+  "name": "fe-starter",
+  "version": "1.1.4",
+  "description": "This is a Pug and Sass starter project using gulp for task automation",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": "",
-  "author": "",
-  "license": "MIT",
-  "bugs": "",
-  "homepage": "",
   "dependencies": {
     "gulp-autoprefixer": "^5.0.0",
     "gulp-critical-css": "^1.0.1",
@@ -30,6 +22,9 @@
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
     "gulp-watch": "^4.3.10",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-plumber": "^1.0.1",
     "pug": "^2.0.0-beta6",
     "run-sequence": "^1.2.2"
   }

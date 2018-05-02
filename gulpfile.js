@@ -13,6 +13,8 @@ var pug = require('gulp-pug');
 var eslint = require('gulp-eslint');
 var watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
+const gulpLoadPlugins = require('gulp-load-plugins');
+const plugins = gulpLoadPlugins();
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -29,6 +31,21 @@ gulp.task('sass', function() {
       browsers: ['last 2 versions']
     }))
     .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('app/dist/css'))
+});
+
+gulp.task('criticalCSS', () => {
+  return gulp.src('app/sass/criticalCSS.scss')
+    .pipe(plugins.plumber())
+    .pipe(plugins.sass.sync({
+      outputStyle: 'compressed',
+      precision: 10,
+      includePaths: ['.']
+    }).on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
+      browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
+    }))
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('watch', function() {
@@ -85,13 +102,13 @@ gulp.task('pug', function buildHTML() {
 });
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'pug', 'browserSync', 'watch'],
+  runSequence(['sass', 'criticalCSS', 'pug', 'browserSync', 'watch'],
     callback
   );
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'pug', 'useref', 'lic', 'imagemin', 'fonts'], callback);
+  runSequence('clean:dist', ['sass', 'criticalCSS', 'pug', 'useref', 'lic', 'imagemin', 'fonts'], callback);
 });
 
 gulp.task('clean', function(callback) {

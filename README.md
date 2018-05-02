@@ -21,6 +21,7 @@ On the gulp side there are utilities listed bellow
 - send all above into a dist folder + copy fonts
 - clean unused files
 - ESLint JavaScript code
+- critical CSS
 
 ## How to use:
 
@@ -29,3 +30,7 @@ On the gulp side there are utilities listed bellow
 3. Run `gulp` to generate the project and be able to make changes as needed.
 4. Stop the gulp, and run `gulp build` to build your site.
 5. Copy the dist directory to your server and you are set.
+6. Deploy critical css:
+- HTML in dist folder:
+  + Remove line <link rel="stylesheet" type="text/css" href="css/criticalCSS.css"> on head
+  + Copy all code inside "dist/css/criticalCSS.css" to <style></style> on head
