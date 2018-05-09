@@ -45,3 +45,9 @@ https://camwiegert.github.io/in-view/
 
 3. Slider carousel:
 https://github.com/ganlanyuan/tiny-slider
+
+## CSS / SASS Styleguide
+
+1. Airbnb:
+https://github.com/airbnb/css
+
