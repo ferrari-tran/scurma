@@ -34,3 +34,14 @@ On the gulp side there are utilities listed bellow
 - HTML in dist folder:
   + Remove line <link rel="stylesheet" type="text/css" href="css/criticalCSS.css"> on head
   + Copy all code inside "dist/css/criticalCSS.css" to <style></style> on head
+
+## JS plugin listing to use:
+
+1. Headroom:
+http://wicky.nillia.ms/headroom.js/
+
+2. Inview:
+https://camwiegert.github.io/in-view/
+
+3. Slider carousel:
+https://github.com/ganlanyuan/tiny-slider
