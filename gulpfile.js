@@ -15,6 +15,8 @@ var watch = require('gulp-watch');
 const autoprefixer = require('gulp-autoprefixer');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const plugins = gulpLoadPlugins();
+var babel = require("gulp-babel");
+const babelMinify = require("gulp-babel-minify");
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -26,6 +28,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function() {
   return gulp.src('app/sass/**/*.scss') //Source all files ending with.scss in scss directory and its subdirectories
+    .pipe(plugins.plumber())
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
@@ -50,7 +53,6 @@ gulp.task('criticalCSS', () => {
 gulp.task('watch', function() {
   gulp.watch('app/sass/**/*.scss', ['sass']);
   gulp.watch('app/views/**/*.pug', ['pug']);
-  gulp.watch('app/js/index.js', ['lint']);
   gulp.watch('app/js/**/*.js', browserSync.reload);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/css/*.css', browserSync.reload);
@@ -59,7 +61,13 @@ gulp.task('watch', function() {
 gulp.task('useref', function() {
   return gulp.src('app/*.html') //Source all html files
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify())) //Minifies only if it is js file
+    .pipe(gulpIf('*.js', babel()))
+    // .pipe(gulpIf('*.js', uglify())) //Minifies only if it is js file
+    .pipe(gulpIf('*.js', babelMinify({
+      mangle: {
+        keepClassName: true
+      }
+    }))) //Minifies only if it is js file
     .pipe(gulpIf('*.css', cssnano())) //Minifies only if it is css file 
     .pipe(gulp.dest('dist'))
 });
@@ -94,6 +102,7 @@ gulp.task('clean:app', function() {
 
 gulp.task('pug', function buildHTML() {
   return gulp.src(['!app/views/_*.pug', 'app/views/*.pug'])
+    .pipe(plugins.plumber())
     .pipe(pug({
       pretty: true
     }))
