@@ -1,0 +1,57 @@
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$primary-color:                 #1f3971;
+$light:                         #fff;
+$gray-light:                    #f8f8f8;
+$gray:                          #b9b9b9;
+$gray-dark:                     #707070;
+$dark:                          #1d1d1d;
+
+
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-roboto:                   'Roboto';
+$font-pt-serif:                 'PT Serif';
+
+$font-body:                     $font-roboto, sans-serif;
+$font-title:                    $font-roboto, sans-serif;
+
+
+/* Width page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$width-page:                    116.8rem;
+
+
+/* Breakpoint
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$break-l:                       102.5rem; //1025px
+$break-m:                       99.2rem; //992px
+$break-sm:                      76.8rem; //768px
+$break-s:                       48rem; //480px
+
+
+/* Font-weight
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-weight-light:             300;
+$font-weight-regular:           400;
+$font-weight-semi-bold:         600;
+$font-weight-bold:              700;
+$font-weight-default:           $font-weight-regular;
+
+
+/* Font-size
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$font-size-default:             1.6rem;
+
+
+/* Gutter
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$gutter:                        1.5rem;
+
+
+/* Transition
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$cubic1:                        cubic-bezier(0.19, 1, 0.22, 1);
+$cubic2:                        cubic-bezier(.48, .48, .57, .57);
+$cubic3:                        cubic-bezier(0.215, 0.61, 0.355, 1);
+$cubic4:                        cubic-bezier(0.4, 0, 0.2, 1);

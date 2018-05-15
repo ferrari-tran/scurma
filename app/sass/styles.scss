@@ -1,4 +1,10 @@
-@import 'normalize';
-@import 'skeleton';
+@import 'plugins/normalize';
 @import 'plugins/tiny-slider';
 @import 'variables';
+@import 'extends';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+@import 'layout';
+
+@import 'components/header';
