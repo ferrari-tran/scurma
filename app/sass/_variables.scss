@@ -1,33 +1,48 @@
 /* Colors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-$primary-color:                 #1f3971;
-$light:                         #fff;
-$gray-light:                    #f8f8f8;
-$gray:                          #b9b9b9;
-$gray-dark:                     #707070;
-$dark:                          #1d1d1d;
+$colors: () !default;
+$colors: map-merge((
+  dark-blue: #2d4059,
+  yellow: #ffb400,
+  light: #f6f6f6,
+  red: #ea5455
+), $colors);
+
+$text-body: color(blue-dark);
+
+
+/* Grids
+ * Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  xsm: 400px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$enable-grid-classes: true !default;
 
 
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-$font-roboto:                   'Roboto';
-$font-pt-serif:                 'PT Serif';
-
-$font-body:                     $font-roboto, sans-serif;
-$font-title:                    $font-roboto, sans-serif;
-
-
-/* Width page
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-$width-page:                    116.8rem;
-
-
-/* Breakpoint
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-$break-l:                       102.5rem; //1025px
-$break-m:                       99.2rem; //992px
-$break-sm:                      76.8rem; //768px
-$break-s:                       48rem; //480px
+$fonts: (
+  roboto: 'Roboto'
+);
+$font-type  : sans-serif;
+$font-family: font(roboto);
 
 
 /* Font-weight
@@ -41,12 +56,31 @@ $font-weight-default:           $font-weight-regular;
 
 /* Font-size
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-$font-size-default:             1.6rem;
+$font-size-percentage-default:  62.5%; // Reduce font size to 1rem = 10px
+$font-size-default:             1.6rem; // ~16px
 
 
-/* Gutter
+/* Line-height
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-$gutter:                        1.5rem;
+$line-height-default:           1.5;
+$line-height-condensed:         1.2;
+
+
+/* Spacing
+ * Use to make utilities spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 5),
+  7: ($spacer * 10)
+), $spacers);
 
 
 /* Transition
@@ -55,3 +89,10 @@ $cubic1:                        cubic-bezier(0.19, 1, 0.22, 1);
 $cubic2:                        cubic-bezier(.48, .48, .57, .57);
 $cubic3:                        cubic-bezier(0.215, 0.61, 0.355, 1);
 $cubic4:                        cubic-bezier(0.4, 0, 0.2, 1);
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:      150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:                 #212121 !default;
+$yiq-text-light:                white !default;

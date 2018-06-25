@@ -1,3 +1,44 @@
 extends layout/_layout
 block content
-  h1 Page listing
+  br
+  .container
+    h1 Layout
+  br
+  .container
+    .row
+      .col
+        .box Column 1
+      .col
+        .box Column 2
+    .row
+      .col
+        .box Column 1
+      .col
+        .box Column 2
+      .col
+        .box Column 3
+    br
+    h3 Responsive
+    br
+    .row
+      .col-md-3 
+        .box Col-md-3
+      .col-md-3 
+        .box Col-md-3
+      .col-md-3 
+        .box Col-md-3
+      .col-md-3 
+        .box Col-md-3
+    h3 Media breakpoints
+    p Using mixin
+    .box
+      ul
+        li media-breakpoint-up(xs, xsm, sm, md, xl)
+        li media-breakpoint-down(xs, xsm, sm, md, xl)
+        li media-breakpoint-between(md, xl)...
+    br
+    h3 Spacing
+    br
+    .box.mb-6 mb-6 ~ margin-bottom size 6 ~ 50px
+    .box
+    

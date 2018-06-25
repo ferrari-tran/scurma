@@ -1,10 +1,15 @@
 @import 'plugins/normalize';
 @import 'plugins/tiny-slider';
+
+@import 'functions';
 @import 'variables';
+
 @import 'extends';
 @import 'mixins';
 @import 'fonts';
 @import 'global';
 @import 'layout';
+@import 'grid';
+@import 'utilities';
 
 @import 'components/header';

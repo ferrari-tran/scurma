@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>VicoStone</title>
+    <title>FE Default</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Personal Website">
     <meta name="author" content="">
@@ -15,8 +15,58 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- endbuild-->
   </head>
-  <body>
-    <h1>Page listing</h1>
+  <body><br>
+    <div class="container">
+      <h1>Layout</h1>
+    </div><br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="box">Column 1</div>
+        </div>
+        <div class="col">
+          <div class="box">Column 2</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="box">Column 1</div>
+        </div>
+        <div class="col">
+          <div class="box">Column 2</div>
+        </div>
+        <div class="col">
+          <div class="box">Column 3</div>
+        </div>
+      </div><br>
+      <h3>Responsive</h3><br>
+      <div class="row">
+        <div class="col-md-3"> 
+          <div class="box">Col-md-3</div>
+        </div>
+        <div class="col-md-3"> 
+          <div class="box">Col-md-3</div>
+        </div>
+        <div class="col-md-3"> 
+          <div class="box">Col-md-3</div>
+        </div>
+        <div class="col-md-3"> 
+          <div class="box">Col-md-3</div>
+        </div>
+      </div>
+      <h3>Media breakpoints</h3>
+      <p>Using mixin</p>
+      <div class="box">
+        <ul>
+          <li>media-breakpoint-up(xs, xsm, sm, md, xl)</li>
+          <li>media-breakpoint-down(xs, xsm, sm, md, xl)</li>
+          <li>media-breakpoint-between(md, xl)...</li>
+        </ul>
+      </div><br>
+      <h3>Spacing</h3><br>
+      <div class="box mb-6">mb-6 ~ margin-bottom size 6 ~ 50px</div>
+      <div class="box"></div>
+    </div>
   </body>
   <!-- build:js js/main.min.js async-->
   <script type="text/javascript" src="js/plugins/tiny-slider.min.js"></script>
