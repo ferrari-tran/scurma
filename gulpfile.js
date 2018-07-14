@@ -111,7 +111,7 @@ gulp.task('pug', function buildHTML() {
 });
 
 gulp.task('minifyhtml', function() {
-  return gulp.src('app/*.html')
+  return gulp.src('dist/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
 });
