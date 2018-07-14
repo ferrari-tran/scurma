@@ -128,7 +128,7 @@ gulp.task('default', function(callback) {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['copy', 'sass', 'criticalCSS', 'pug', 'useref', 'lic', 'imagemin', 'fonts'], callback);
+  runSequence('clean:dist', ['copy', 'sass', 'pug', 'useref', 'lic', 'imagemin', 'fonts'], callback);
 });
 
 gulp.task('clean', function(callback) {
