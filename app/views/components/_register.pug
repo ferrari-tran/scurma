@@ -1,0 +1,33 @@
+include ./_mixins
+
+section.modal.section-register.modal-form-register
+  .modal-dialog
+    button.button-close
+    .modal-content
+      .modal-body
+        .row
+          .col-md-6
+            img(src="images/img4.png" alt="scurma" width="200").d-none.d-md-block.mb-3
+            center.mb-3.mb-md-0
+              +titleSection("Miễn phí giao hàng")
+          .col-md-6
+            script.
+              var submitted = false;
+            iframe(name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {window.location='thankyou/';}")
+            form.form-outline.form-register(method="POST" id="form-register" target="hidden_iframe" onsubmit="submitted = true;" action="https://script.google.com/macros/s/AKfycbxv-REiX_H446-KAwlMuIfzEjGyBMdm6sYcMp0P/exec")
+              .form-group
+                label.form-label Họ và tên
+                input.form-control(name="name" type="text" required)
+              .form-group
+                label.form-label Số điện thoại
+                input.form-control(name="phone" type="tel" required)
+              .form-group
+                label.form-label Đặt mua liệu trình:
+                select.form-control(required name="package")
+                  option(value="4 hộp") 3 tuần - 4 hộp
+                  option(value="5 hộp") 1 tháng - 5 hộp
+                  option(value="8 hộp") 2 tháng - 8 hộp
+              .form-group
+                label.form-label Địa chỉ
+                input.form-control(name="address" type="text" required)
+              button.button-submit(type="submit") Đặt hàng

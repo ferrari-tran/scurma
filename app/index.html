@@ -2,75 +2,425 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>FE Default</title>
+    <title>Scurma</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Personal Website">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/criticalCSS.css">
     <style></style>
     <!-- build:css css/styles.min.css-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- endbuild-->
   </head>
-  <body><br>
-    <div class="container">
-      <h1>Layout</h1>
-    </div><br>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="box">Column 1</div>
-        </div>
-        <div class="col">
-          <div class="box">Column 2</div>
+  <body>
+    <header class="page-header py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"><img src="images/logo.png" alt="scurma"></div>
+          <div class="col-md-9"><img src="images/bannerqc.gif" alt="banner"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="box">Column 1</div>
-        </div>
-        <div class="col">
-          <div class="box">Column 2</div>
-        </div>
-        <div class="col">
-          <div class="box">Column 3</div>
-        </div>
-      </div><br>
-      <h3>Responsive</h3><br>
-      <div class="row">
-        <div class="col-md-3"> 
-          <div class="box">Col-md-3</div>
-        </div>
-        <div class="col-md-3"> 
-          <div class="box">Col-md-3</div>
-        </div>
-        <div class="col-md-3"> 
-          <div class="box">Col-md-3</div>
-        </div>
-        <div class="col-md-3"> 
-          <div class="box">Col-md-3</div>
-        </div>
-      </div>
-      <h3>Media breakpoints</h3>
-      <p>Using mixin</p>
-      <div class="box">
-        <ul>
-          <li>media-breakpoint-up(xs, xsm, sm, md, xl)</li>
-          <li>media-breakpoint-down(xs, xsm, sm, md, xl)</li>
-          <li>media-breakpoint-between(md, xl)...</li>
+    </header>
+    <nav class="page-nav d-none d-lg-block">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item"><a href="#" title="Trang chủ">Trang chủ</a></li>
+          <li class="nav-item"><a href="#" title="Thời sự">Thời sự</a></li>
+          <li class="nav-item"><a href="#" title="Khám bệnh online">Khám bệnh online</a></li>
+          <li class="nav-item"><a href="#" title="Dịch vụ Y">Dịch vụ Y</a></li>
+          <li class="nav-item"><a href="#" title="Chat với bác sĩ">Chat với bác sĩ</a></li>
+          <li class="nav-item"><a href="#" title="Video">Video</a></li>
+          <li class="nav-item"><a href="#" title="Sức khoẻ A-Z">Sức khoẻ A-Z</a></li>
+          <li class="nav-item"><a href="#" title="Tim mạch">Tim mạch</a></li>
         </ul>
-      </div><br>
-      <h3>Spacing</h3><br>
-      <div class="box mb-6">mb-6 ~ margin-bottom size 6 ~ 50px</div>
-      <div class="box"></div>
-    </div>
+      </div>
+    </nav>
+    <main class="pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 py-5">
+            <section class="section-content">
+              <header class="section-content-header">
+                            <h2 class="title-section">ĐAU DẠ DÀY VÀ HÀNH TRÌNH 10 NĂM CHỮA TRỊ</h2>
+                <p class="text-caption">Đăng ngày 19/03/2018, 7:51 | Tác giả: Yến Nguyễn</p>
+              </header>
+              <div class="section-content-body">
+                <p>"Bệnh của làng" đó là tên gọi khác của căn <a class="link" href="#form-register" title="bệnh đau dạ dày">bệnh đau dạ dày</a> mà có lẽ như nó không trừ một ai thì phải, bản thân tôi và những người xung quanh tôi, gia đình, bạn bè, đồng nghiệp…thì hầu như 10 người có đến 7 người mắc căn bệnh này. Đặc biệt mỗi lần vào bệnh viện, thực sự mình choáng với số người nội soi. Càng lên mạng, facebook thì càng thấy <a class="link" href="#form-register" title="sự ghê gớm của căn bệnh này">sự ghê gớm của căn bệnh này</a>.
+                </p>
+                <p>Tôi là Quang Minh năm nay 40 tuổi, hiện đang ở quận Hà Đông, Hà Nội và đang là dân văn phòng .Bản thân tôi đã đánh vật với <a class="link" href="#form-register" title="đau dạ dày 10 năm">đau dạ dày 10 năm</a>và đã trở thành mãn tính. Nào đâu cũng dùng đủ các loại thuốc từ Tây y, Đông y rồi còn chữa trị theo pháp đồ của bác sĩ tôi cũng đã làm nhưng nó không thể dứt điểm được căn bệnh quái ác đó. Công việc và cuộc sống của tôi đều bị ảnh hưởng và <a class="link" href="#form-register" title="càng lúc càng tệ đi">càng lúc càng tệ đi</a>rất nhiều. Cuộc hành trình đi chữa bệnh đau dạ dày 10 năm thật sự là cả một quãng thời gian dài, vất vả và đau đớn.
+                </p>
+                <p>
+                              <figure class="image"><img src="images/img1.jpg" title="">
+                              </figure>
+                </p>
+                <p>Vì công việc của tôi bận rộn, ăn uống không điều độ, bia rượu để tiếp khách hàng, bạn bè , đôi lúc công việc khiến tôi bị stress dẫn đến tôi bị đau dạ dày lúc nào không hay.Vì bận quá cũng không mấy khi để ý đến sức khỏe. Đợt đó, tôi thường xuyên bị đau râm ran vùng bụng, chán ăn, có ăn thì cũng một chút là thấy no, lại còn hay bị ợ hơi, ợ nóng và buồn nôn. Thấy tình trạng sức khỏe ngày càng sa sút, tôi đã xin nghỉ làm một ngày đến bệnh viện khám, lúc nhận kết quả từ bác sĩ tôi không khỏi giật mình, bác sĩ kết luận tôi bị viêm loét dạ dày và đã có vi khuẩn HP. Thật sự khi nhận được kết quả, tôi không khỏi bàng hoàng, không ngờ tình trạng bệnh của mình đã nặng như vậy.</p>
+                <p>Sau khi khám về, tôi hàng ngày <a class="link" href="#form-register" title="đều uống thuốc bác sỹ kê đơn">đều uống thuốc bác sỹ kê đơn</a> và thực hiện theo chỉ dẫn lời khuyên của bác sỹ, tôi chú ý đến ăn uống hơn. Sau thời gian đấy, tình trạng của tôi đã cải thiện đáng kể, không còn xuất hiện những triệu chứng kia nữa. Nghĩ đã khỏi nên khi uống hết đợt thuốc ấy tôi cũng không đi khám lại. Đợt điều trị ấy, tôi cứ nghĩ là đã khỏi hẳn, vì thấy tình trạng cũng đã cải thiện lên. Nhưng rồi chỉ sau đó 1 tháng, các triệu chứng lại xuất hiện lại mà lần này lại còn nặng hơn. Một lần nữa tôi lại phải nghỉ làm để đến bệnh viện khám lại và nhận được kết quả của tôi vẫn còn vi khuẩn HP. Lần này tôi phải nhận phác họa điều trị mới của bác sĩ.
+                </p>
+                <p>
+                              <figure class="image"><img src="images/img2.jpg" title="Vi khuẩn HP">
+                                <figcaption>(Vi khuẩn HP)</figcaption>
+                              </figure>
+                </p>
+                <p>Dù được điều trị theo phác đồ mới nhưng rồi tình trạng bệnh <a class="link" href="#form-register" title="vẫn không giảm">vẫn không giảm</a>, thời gian đó vì thế mà sức khỏe của tôi ngày càng sa sút, ăn không ngon ngủ không ngon. Người vì thế mà sút cân nhanh chóng từ 65kg xuống chỉ còn 55kg. Thời gian cứ thế trôi qua, 10 năm qua, tôi vẫn luôn lên mạng tìm hiểu và được nhiều người mách các cách chữa bệnh theo phương pháp dân gian, rồi đến các loại thuốc đông y, nam bắc đủ cả, rồi thầy thuốc này thầy thuốc kia ở đâu tôi cũng đi hết. Nhưng tình trạng chỉ cải thiện được lúc đó, sau thì đâu lại vào đấy. Khiến tôi thật sự tuyệt vọng ngày càng tuyệt vọng.
+                </p>
+                <p>Cho đến cách đây 1 năm khi một người bạn mới vào làm cùng công ty và biết được tình trạng của tôi thì đã giới thiệu cho tôi sử dùng <a class="link" href="#form-register" title="sản phẩm SCurma Fizzy">sản phẩm SCurma Fizzy</a> - Viên sủi Nano Curcumin. Ban đầu, được giới thiệu sản phẩm, tôi cũng bán tín bán nghi, nhưng nghe nói về sản phẩm này:
+                </p>
+                <p>- Sản phẩm tinh chất nghệ nano bào chế bởi TS. Nguyễn Phúc Nghĩa – nhiều năm nghiên cứu khoa học tại Đại học Strasbourg, Pháp nên tôi cũng yên tâm hơn.</p>
+                <p>
+                              <figure class="image"><img src="images/img3.jpg" title="">
+                              </figure>
+                </p>
+                <p>- Nano Curcumin: Là một hoạt chất quý giá chứa trong nghệ mang lại rất nhiều lợi ích cho sức khỏe, với việc sử dụng công nghệ nano, Curcumin được chắt lọc kỹ càng nhất và được để dưới dạng phân tử nano tăng khả năng hấp thụ hoạt chất của cơ thể. <a class="link" href="#form-register" title="lên đến 7500 lần">lên đến 7500 lần</a>. Nano Curcumin không chỉ có tác dụng với các căn bệnh dạ dày mà thành phần này còn phòng chống bệnh ung thư rất hiệu quả.
+                </p>
+                <p>- Tinh chất nghệ nano dạng sủi tăng khả năng <a class="link" href="#form-register" title="tấn công vào vùng viêm">tấn công vào vùng viêm</a> tại dạ dày và tốc độ hấp thu vào máu nhanh nhất (chỉ chậm hơn tiêm).
+                </p>
+                <p>- An toàn: Nguyên liệu là kết quả chuyển giao từ đề tài nghiên cứu của Viện Hàn Lâm Khoa Học Việt Nam và ĐHQG Hà Nội.</p>
+                <p>
+                              <figure class="image"><img src="images/img4.png" title="">
+                              </figure>
+                </p>
+                <p>Nghe vậy tôi cũng yên tâm hơn. Tôi liền đặt mua dùng thử 5 hộp, khi sử dụng hết thì những triệu chứng đã không còn xuất hiện. Thấy sản phẩm hiệu quả, nên tôi đặt mua thêm 10 hộp về dùng xem có sự khác biệt hơn các cách tôi đã sử dụng không và cũng vì bệnh tình của tôi đã khá nặng nên tôi cần sử dụng trong thời gian dài hơn. Vậy mà sản phẩm hiệu quả lắm nhé! 1 năm trôi nhanh tôi không còn những triệu chứng như trên nữa nên cũng muốn đi xét nghiệm lại xem bệnh tình có đỡ hơn thật hay không. Khi nhận được kết quả thì kết quả là âm tính vi khuẩn HP, vui lắm mọi người ạ! Đúng là sản phẩm tốt, thật sự cảm ơn SCurma Fizzy- Viên sủi Nano Curcumin rất nhiều, vì giờ tôi có thể ăn ngon ngủ ngon, làm việc tốt đươc rồi .</p>
+                <p>Khi mà số lượng người mắc bệnh <a class="link" href="#form-register" title="ung thư và dạ dày">ung thư và dạ dày</a> đang gia tăng nhanh chóng như hiện nay thì một sản phẩm ưu việt như SCurma Fizzy- Viên sủi Nano Curcumin tôi nghĩ là sẽ giúp ích khá nhiều trong việc chăm sóc và bảo vệ sức khỏe sức khỏe của bạn và gia đình bạn đó.
+                </p>
+                <p>
+                              <figure class="image"><img src="images/img5.jpg" title="">
+                              </figure>
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-4 py-5 d-none d-lg-block">
+            <section class="section-news mb-5">
+              <header class="section-news-header">
+                            <h3 class="title-panel">TÌM KIẾM</h3>
+              </header>
+              <div class="section-news-body">
+                <div class="form-search mb-3">
+                  <input type="search" placeholder="Nhập từ khoá">
+                </div>
+                            <article class="card-news large">
+                              <div class="card-news-header"><img src="images/news-1.jpg" title="Ăn tỏi đen hàng ngày rất tốt cho tim mạch"></div>
+                              <div class="card-news-body"><a title="Ăn tỏi đen hàng ngày rất tốt cho tim mạch" href="#">
+                                  <h4>Ăn tỏi đen hàng ngày rất tốt cho tim mạch</h4></a>
+                                <p class="text-caption">07/01/2018</p>
+                              </div>
+                            </article>
+              </div>
+            </section>
+            <section class="section-news mb-4">
+              <header class="section-news-header">
+                            <h3 class="title-panel">ĐỌC NHIỀU NHẤT</h3>
+              </header>
+              <div class="section-news-body">
+                            <article class="card-news small">
+                              <div class="card-news-left"><img src="images/aside-1.jpg" title="Những thảo dược quý đến từ Nhật Bản giúp đỡ người cao tuổi"></div>
+                              <div class="card-news-body">
+                                <h6 class="card-news-title">Những thảo dược quý đến từ Nhật Bản giúp đỡ người cao tuổi</h6>
+                              </div>
+                            </article>
+                            <article class="card-news small">
+                              <div class="card-news-left"><img src="images/aside-2.jpg" title="Hết đau nhức xương khớp là do thứ này"></div>
+                              <div class="card-news-body">
+                                <h6 class="card-news-title">Hết đau nhức xương khớp là do thứ này</h6>
+                              </div>
+                            </article>
+                            <article class="card-news small">
+                              <div class="card-news-left"><img src="images/aside-3.jpg" title="Không đọc bài viết này là một sai lầm quá lớn!"></div>
+                              <div class="card-news-body">
+                                <h6 class="card-news-title">Không đọc bài viết này là một sai lầm quá lớn!</h6>
+                              </div>
+                            </article>
+                            <article class="card-news small">
+                              <div class="card-news-left"><img src="images/aside-4.jpg" title="Trĩ sẽ không còn làm phiền được nữa nếu làm theo cách này"></div>
+                              <div class="card-news-body">
+                                <h6 class="card-news-title">Trĩ sẽ không còn làm phiền được nữa nếu làm theo cách này</h6>
+                              </div>
+                            </article>
+                            <article class="card-news small">
+                              <div class="card-news-left"><img src="images/aside-5.jpg" title="Tỏi tươi tốt hay tỏi đen tốt hơn?"></div>
+                              <div class="card-news-body">
+                                <h6 class="card-news-title">Tỏi tươi tốt hay tỏi đen tốt hơn?</h6>
+                              </div>
+                            </article>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <section class="section-options py-5">
+              <header class="section-options-header">
+                            <h2 class="title-section-large">Đăng ký mua hàng</h2>
+              </header>
+              <div class="section-options-body">
+                <div class="row">
+                  <div class="col-lg-4">
+                                <article class="card-option">
+                                  <header class="card-option-header">
+                                    <h4 class="card-option-title">Liệu trình 3 tuần</h4>
+                                    <p class="card-option-subtitle">1.180.000 VNĐ</p>
+                                  </header>
+                                  <div class="card-option-body">
+                                    <ul>
+                                      <li><a href="#" title="8 tuýp x 10 viên">8 tuýp x 10 viên</a></li>
+                                      <li><a href="#" title="Miễn phí giao hàng toàn quốc">Miễn phí giao hàng toàn quốc</a></li>
+                                    </ul>
+                                  </div>
+                                  <footer class="card-option-footer"><a class="button button-show-modal" href="#" title="Đặt hàng" data-target-modal=".modal-form-register" data-option="4 hộp">Đặt hàng</a></footer>
+                                </article>
+                  </div>
+                  <div class="col-lg-4">
+                                <article class="card-option offer">
+                                  <header class="card-option-header">
+                                    <h4 class="card-option-title">Liệu trình 1 tháng</h4>
+                                    <p class="card-option-subtitle">1.475.000 VNĐ</p>
+                                  </header>
+                                  <div class="card-option-body">
+                                    <ul>
+                                      <li><a href="#" title="10 tuýp x 10 viên">10 tuýp x 10 viên</a></li>
+                                      <li><a href="#" title="Liệu trình cơ bản">Liệu trình cơ bản</a></li>
+                                      <li><a href="#" title="Miễn phí giao hàng toàn quốc">Miễn phí giao hàng toàn quốc</a></li>
+                                    </ul>
+                                  </div>
+                                  <footer class="card-option-footer"><a class="button button-show-modal" href="#" title="Đặt hàng" data-target-modal=".modal-form-register" data-option="5 hộp">Đặt hàng</a></footer>
+                                </article>
+                  </div>
+                  <div class="col-lg-4">
+                                <article class="card-option">
+                                  <header class="card-option-header">
+                                    <h4 class="card-option-title">Liệu trình 2 tháng</h4>
+                                    <p class="card-option-subtitle">2.360.000 VNĐ</p>
+                                  </header>
+                                  <div class="card-option-body">
+                                    <ul>
+                                      <li><a href="#" title="16 tuýp x 10 viên">16 tuýp x 10 viên</a></li>
+                                      <li><a href="#" title="Được tặng thêm 1 hộp">Được tặng thêm 1 hộp</a></li>
+                                      <li><a href="#" title="Liệu trình nâng cao">Liệu trình nâng cao</a></li>
+                                      <li><a href="#" title="Cho kết quả tốt nhất">Cho kết quả tốt nhất</a></li>
+                                      <li><a href="#" title="Miễn phí giao hàng toàn quốc">Miễn phí giao hàng toàn quốc</a></li>
+                                    </ul>
+                                  </div>
+                                  <footer class="card-option-footer"><a class="button button-show-modal" href="#" title="Đặt hàng" data-target-modal=".modal-form-register" data-option="8 hộp">Đặt hàng</a></footer>
+                                </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col py-5">
+            <section class="section-comments py-5">
+              <header class="section-comments-header">
+                            <div class="title-inside">
+                              <h5>Bình luận</h5>
+                            </div>
+              </header>
+              <div class="section-comments-body">
+                <ul>
+                  <li>
+                                <div class="comment">
+                                  <div class="comment-left"><img src="images/ava-1.jpg" title="Nguyễn Thanh Bình"></div>
+                                  <div class="comment-body">
+                                    <h6 class="comment-title">Nguyễn Thanh Bình</h6>
+                                    <p>Nếu mà hiệu quả như vậy thật thì giá sản phẩm cũng không quá đắt.</p>
+                                    <p class="comment-time text-caption">14 phút trước | Trả lời</p>
+                                  </div>
+                                </div>
+                  </li>
+                  <li>
+                                <div class="comment">
+                                  <div class="comment-left"><img src="images/ava-2.jpg" title="Quốc Phong"></div>
+                                  <div class="comment-body">
+                                    <h6 class="comment-title">Quốc Phong</h6>
+                                    <p>Mình vừa đặt hàng rồi đó, các bạn kiểm tra lại thông tin và giao hàng giúp mình luôn nhé. Cảm ơn!</p>
+                                    <p class="comment-time text-caption">34 phút trước | Trả lời</p>
+                                  </div>
+                                </div>
+                  </li>
+                  <li>
+                                <div class="comment">
+                                  <div class="comment-left"><img src="images/ava-3.jpg" title="Công Thắng"></div>
+                                  <div class="comment-body">
+                                    <h6 class="comment-title">Công Thắng</h6>
+                                    <p>May mà đọc được bài này, để mình bảo mẹ mình tham khảo.</p>
+                                    <p class="comment-time text-caption">45 phút trước | Trả lời</p>
+                                  </div>
+                                </div>
+                  </li>
+                  <li>
+                                <div class="comment">
+                                  <div class="comment-left"><img src="images/ava-4.jpg" title="Tâm Nguyễn"></div>
+                                  <div class="comment-body">
+                                    <h6 class="comment-title">Tâm Nguyễn</h6>
+                                    <p>Ship mình luôn 5 hộp về Eco Green Nguyễn Xiển với. Điện thoại 0938279066 (Tâm)</p>
+                                    <p class="comment-time text-caption">56 phút trước | Trả lời</p>
+                                  </div>
+                                </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <section class="section-news mb-4">
+              <header class="section-news-header">
+                            <h3 class="title-panel">BẢN TIN SỨC KHỎE</h3>
+              </header>
+              <div class="section-news-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                                <article class="card-news large">
+                                  <div class="card-news-header"><img src="images/news-1.jpg" title="Ăn tỏi đen hàng ngày rất tốt cho tim mạch"></div>
+                                  <div class="card-news-body"><a title="Ăn tỏi đen hàng ngày rất tốt cho tim mạch" href="#">
+                                      <h4>Ăn tỏi đen hàng ngày rất tốt cho tim mạch</h4></a>
+                                    <p class="text-caption">07/01/2018</p>
+                                  </div>
+                                </article>
+                  </div>
+                  <div class="col-sm-4">
+                                <article class="card-news large">
+                                  <div class="card-news-header"><img src="images/news-2.jpg" title="Mách nhỏ cho người đang bị đau xương khớp"></div>
+                                  <div class="card-news-body"><a title="Mách nhỏ cho người đang bị đau xương khớp" href="#">
+                                      <h4>Mách nhỏ cho người đang bị đau xương khớp</h4></a>
+                                    <p class="text-caption">08/01/2018</p>
+                                  </div>
+                                </article>
+                  </div>
+                  <div class="col-sm-4">
+                                <article class="card-news large">
+                                  <div class="card-news-header"><img src="images/news-3.jpg" title="Ăn gì tốt cho sức khỏe hôm nay?"></div>
+                                  <div class="card-news-body"><a title="Ăn gì tốt cho sức khỏe hôm nay?" href="#">
+                                      <h4>Ăn gì tốt cho sức khỏe hôm nay?</h4></a>
+                                    <p class="text-caption">07/01/2018</p>
+                                  </div>
+                                </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-6">
+            <section class="section-news">
+              <header class="section-news-header">
+                            <h3 class="title-panel">TIN CÙNG CHUYÊN MỤC</h3>
+              </header>
+              <div class="section-news-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                                <article class="card-news">
+                                  <div class="card-news-header"><img src="images/news-4.jpg" title="Loại thực phẩm ăn hàng ngày tốt cho sức khỏe"></div>
+                                  <div class="card-news-body"><a title="Loại thực phẩm ăn hàng ngày tốt cho sức khỏe" href="#">
+                                      <h4>Loại thực phẩm ăn hàng ngày tốt cho sức khỏe</h4></a></div>
+                                </article>
+                  </div>
+                  <div class="col-sm-4">
+                                <article class="card-news">
+                                  <div class="card-news-header"><img src="images/news-5.jpg" title="Bài thuốc Đông Y giúp ngăn ngừa các tác nhân của bệnh trĩ"></div>
+                                  <div class="card-news-body"><a title="Bài thuốc Đông Y giúp ngăn ngừa các tác nhân của bệnh trĩ" href="#">
+                                      <h4>Bài thuốc Đông Y giúp ngăn ngừa các tác nhân của bệnh trĩ</h4></a></div>
+                                </article>
+                  </div>
+                  <div class="col-sm-4">
+                                <article class="card-news">
+                                  <div class="card-news-header"><img src="images/news-6.jpg" title="Đau nhức xương khớp sẽ không còn hành hạ nếu làm theo cách này"></div>
+                                  <div class="card-news-body"><a title="Đau nhức xương khớp sẽ không còn hành hạ nếu làm theo cách này" href="#">
+                                      <h4>Đau nhức xương khớp sẽ không còn hành hạ nếu làm theo cách này</h4></a></div>
+                                </article>
+                  </div>
+                  <div class="col-sm-4">
+                                <article class="card-news">
+                                  <div class="card-news-header"><img src="images/news-7.jpg" title="Thay đổi thời tiết, những mẹo nhỏ cho người già"></div>
+                                  <div class="card-news-body"><a title="Thay đổi thời tiết, những mẹo nhỏ cho người già" href="#">
+                                      <h4>Thay đổi thời tiết, những mẹo nhỏ cho người già</h4></a></div>
+                                </article>
+                  </div>
+                  <div class="col-sm-4">
+                                <article class="card-news">
+                                  <div class="card-news-header"><img src="images/news-8.jpg" title="Thảo dược tốt cho sức khỏe đến từ Nhật Bản"></div>
+                                  <div class="card-news-body"><a title="Thảo dược tốt cho sức khỏe đến từ Nhật Bản" href="#">
+                                      <h4>Thảo dược tốt cho sức khỏe đến từ Nhật Bản</h4></a></div>
+                                </article>
+                  </div>
+                  <div class="col-sm-4">
+                                <article class="card-news">
+                                  <div class="card-news-header"><img src="images/news-9.jpg" title="Vì sao nhân sâm tốt cho sức khỏe?"></div>
+                                  <div class="card-news-body"><a title="Vì sao nhân sâm tốt cho sức khỏe?" href="#">
+                                      <h4>Vì sao nhân sâm tốt cho sức khỏe?</h4></a></div>
+                                </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <nav class="page-nav bottom d-none d-lg-block">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item"><a href="#" title="Trang chủ">Trang chủ</a></li>
+          <li class="nav-item"><a href="#" title="Khám bệnh online">Khám bệnh online</a></li>
+          <li class="nav-item"><a href="#" title="Hỏi đáp dịch vụ y tế">Hỏi đáp dịch vụ y tế</a></li>
+          <li class="nav-item"><a href="#" title="Tư vấn trực tiếp">Tư vấn trực tiếp</a></li>
+          <li class="nav-item"><a href="#" title="Ưu đãi khuyến mãi">Ưu đãi khuyến mãi</a></li>
+          <li class="nav-item"><a href="#" title="Thuốc">Thuốc</a></li>
+        </ul>
+      </div>
+    </nav>
+    <footer class="page-footer">
+      <div class="container"><i><span>Lưu ý: Tùy theo cơ địa và tình trạng bệnh của mỗi người mà hiệu quả của sản phẩm sẽ khác nhau.</span></i></div>
+    </footer>
+    <section class="modal section-register modal-form-register">
+      <div class="modal-dialog">
+        <button class="button-close"></button>
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6"><img class="d-none d-md-block mb-3" src="images/img4.png" alt="scurma" width="200">
+                <center class="mb-3 mb-md-0">
+                      <h2 class="title-section">Miễn phí giao hàng</h2>
+                </center>
+              </div>
+              <div class="col-md-6">
+                <script>var submitted = false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {window.location='thankyou/';}"></iframe>
+                <form class="form-outline form-register" method="POST" id="form-register" target="hidden_iframe" onsubmit="submitted = true;" action="https://script.google.com/macros/s/AKfycbxv-REiX_H446-KAwlMuIfzEjGyBMdm6sYcMp0P/exec">
+                  <div class="form-group">
+                    <label class="form-label">Họ và tên</label>
+                    <input class="form-control" name="name" type="text" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Số điện thoại</label>
+                    <input class="form-control" name="phone" type="tel" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Đặt mua liệu trình:</label>
+                    <select class="form-control" required name="package">
+                      <option value="4 hộp">3 tuần - 4 hộp</option>
+                      <option value="5 hộp">1 tháng - 5 hộp</option>
+                      <option value="8 hộp">2 tháng - 8 hộp</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Địa chỉ</label>
+                    <input class="form-control" name="address" type="text" required>
+                  </div>
+                  <button class="button-submit" type="submit">Đặt hàng</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
   <!-- build:js js/main.min.js async-->
-  <script type="text/javascript" src="js/plugins/tiny-slider.min.js"></script>
-  <script type="text/javascript" src="js/plugins/in-view.min.js"></script>
+  <script type="text/javascript" src="js/plugins/jquery.min.js"></script>
   <script type="text/javascript" async src="js/main.js"></script>
   <!-- endbuild-->
 </html>

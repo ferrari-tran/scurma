@@ -1,0 +1,28 @@
+include ./_mixins
+
+section.section-options.py-5
+  header.section-options-header
+    +titleSectionLarge("Đăng ký mua hàng")
+  .section-options-body
+    .row
+      .col-lg-4
+        +cardOption(
+          "3 tuần",
+          "1.180.000 VNĐ",
+          ["8 tuýp x 10 viên", "Miễn phí giao hàng toàn quốc"],
+          "4 hộp"
+        )
+      .col-lg-4
+        +cardOption(
+          "1 tháng",
+          "1.475.000 VNĐ",
+          ["10 tuýp x 10 viên", "Liệu trình cơ bản", "Miễn phí giao hàng toàn quốc"],
+          "5 hộp"
+        )(class="offer")
+      .col-lg-4
+        +cardOption(
+          "2 tháng",
+          "2.360.000 VNĐ",
+          ["16 tuýp x 10 viên", "Được tặng thêm 1 hộp", "Liệu trình nâng cao", "Cho kết quả tốt nhất", "Miễn phí giao hàng toàn quốc"],
+          "8 hộp"
+        )

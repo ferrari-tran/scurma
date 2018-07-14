@@ -1,0 +1,52 @@
+.page-nav {
+  background: color(primary);
+
+  &.bottom {
+    background: rgba(color(dark), .5);
+  }
+}
+
+.nav {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-item {
+
+      > a {
+        color: color(light);
+        padding: 1rem;
+        text-transform: uppercase;
+        display: block;
+        font-weight: $font-weight-semi-bold;
+        font-family: font(robotoCondensed);
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: .3rem;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          background: color(light);
+          transition: all .3s $cubic3;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+
+      &:first-child > a {
+        padding-left: 0;
+      }
+
+      &:last-child > a {
+        padding-right: 0;
+      }
+    }
+  }
+}

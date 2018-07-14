@@ -1,0 +1,8 @@
+- navList = ['Trang chủ', 'Khám bệnh online', 'Hỏi đáp dịch vụ y tế', 'Tư vấn trực tiếp', 'Ưu đãi khuyến mãi', 'Thuốc'];
+
+nav.page-nav.bottom.d-none.d-lg-block
+	.container
+		ul.nav
+			each val in navList
+				li.nav-item
+					a(href="#" title=val)= val

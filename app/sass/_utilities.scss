@@ -48,3 +48,92 @@
     }
   }
 }
+
+//
+// Utilities for common `display` values
+//
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-none         { display: none !important; }
+    .d#{$infix}-inline       { display: inline !important; }
+    .d#{$infix}-inline-block { display: inline-block !important; }
+    .d#{$infix}-block        { display: block !important; }
+    .d#{$infix}-table        { display: table !important; }
+    .d#{$infix}-table-row    { display: table-row !important; }
+    .d#{$infix}-table-cell   { display: table-cell !important; }
+    .d#{$infix}-flex         { display: flex !important; }
+    .d#{$infix}-inline-flex  { display: inline-flex !important; }
+  }
+}
+
+
+//
+// Utilities for toggling `display` in print
+//
+
+@media print {
+  .d-print-none         { display: none !important; }
+  .d-print-inline       { display: inline !important; }
+  .d-print-inline-block { display: inline-block !important; }
+  .d-print-block        { display: block !important; }
+  .d-print-table        { display: table !important; }
+  .d-print-table-row    { display: table-row !important; }
+  .d-print-table-cell   { display: table-cell !important; }
+  .d-print-flex         { display: flex !important; }
+  .d-print-inline-flex  { display: inline-flex !important; }
+}
+
+// Customize
+.link {
+  font-weight: $font-weight-bold;
+  color: color(highlight);
+  transition: all .3s $cubic1;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-caption {
+  color: rgba(color(dark), .7);
+  font-size: 1.4rem;
+}
+
+.title-section-large {
+  font-size: 3.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.title-panel {
+  margin-bottom: 2.4rem;
+  border: none;
+  border-left: solid .3rem color(primary);
+  padding: .8rem 1.5rem;
+  background: color(gray-light);
+}
+
+.title-inside {
+  margin-bottom: 2.4rem;
+
+  h5 {
+    color: color(highlight);
+    text-transform: uppercase;
+    // border-bottom: solid .1rem color(gray);
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+    background: rgba(color(highlight), .1);
+  }
+}
+.image {
+  text-align: center;
+  margin: 1.5rem auto;
+
+  figcaption {
+    font-style: italic;
+  }
+}

@@ -2,13 +2,17 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 $colors: () !default;
 $colors: map-merge((
-  dark-blue: #2d4059,
-  yellow: #ffb400,
-  light: #f6f6f6,
-  red: #ea5455
+  primary: #f68a1e,
+  primary-dark: #ef7c0a,
+  secondary: #39CB74,
+  light: #fff,
+  dark: #414141,
+  highlight: #337ab7,
+  gray: #e5e5e5,
+  gray-light: #F6F6F6
 ), $colors);
 
-$text-body: color(blue-dark);
+$text-body: color(dark);
 
 
 /* Grids
@@ -39,7 +43,8 @@ $enable-grid-classes: true !default;
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 $fonts: (
-  roboto: 'Roboto'
+  roboto: 'Roboto',
+  robotoCondensed: 'Roboto condensed'
 );
 $font-type  : sans-serif;
 $font-family: font(roboto);

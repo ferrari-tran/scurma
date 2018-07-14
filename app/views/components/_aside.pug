@@ -1,0 +1,19 @@
+include ./_mixins
+
+section.section-news.mb-5
+	header.section-news-header
+		+titlePanel("TÌM KIẾM")
+	.section-news-body
+		.form-search.mb-3
+			input(type="search" placeholder="Nhập từ khoá")
+		+cardNewsLarge("images/news-1.jpg", "Ăn tỏi đen hàng ngày rất tốt cho tim mạch", "07/01/2018")
+
+section.section-news.mb-4
+	header.section-news-header
+		+titlePanel("ĐỌC NHIỀU NHẤT")
+	.section-news-body
+		+cardNewsSmall("images/aside-1.jpg", "Những thảo dược quý đến từ Nhật Bản giúp đỡ người cao tuổi")
+		+cardNewsSmall("images/aside-2.jpg", "Hết đau nhức xương khớp là do thứ này")
+		+cardNewsSmall("images/aside-3.jpg", "Không đọc bài viết này là một sai lầm quá lớn!")
+		+cardNewsSmall("images/aside-4.jpg", "Trĩ sẽ không còn làm phiền được nữa nếu làm theo cách này")
+		+cardNewsSmall("images/aside-5.jpg", "Tỏi tươi tốt hay tỏi đen tốt hơn?")

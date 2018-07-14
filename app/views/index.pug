@@ -1,44 +1,25 @@
 extends layout/_layout
 block content
-  br
-  .container
-    h1 Layout
-  br
-  .container
-    .row
-      .col
-        .box Column 1
-      .col
-        .box Column 2
-    .row
-      .col
-        .box Column 1
-      .col
-        .box Column 2
-      .col
-        .box Column 3
-    br
-    h3 Responsive
-    br
-    .row
-      .col-md-3 
-        .box Col-md-3
-      .col-md-3 
-        .box Col-md-3
-      .col-md-3 
-        .box Col-md-3
-      .col-md-3 
-        .box Col-md-3
-    h3 Media breakpoints
-    p Using mixin
-    .box
-      ul
-        li media-breakpoint-up(xs, xsm, sm, md, xl)
-        li media-breakpoint-down(xs, xsm, sm, md, xl)
-        li media-breakpoint-between(md, xl)...
-    br
-    h3 Spacing
-    br
-    .box.mb-6 mb-6 ~ margin-bottom size 6 ~ 50px
-    .box
-    
+  include ./components/_header
+  include ./components/_navigation
+  main.pb-5
+    .container
+      .row
+        .col-lg-8.py-5
+          include ./components/_content
+        .col-lg-4.py-5.d-none.d-lg-block
+          include ./components/_aside
+      .row
+        .col
+          include ./components/_options
+      .row
+        .col.py-5
+          include ./components/_comment
+      .row
+        .col-lg-6
+          include ./components/_news-healthy
+        .col-lg-6
+          include ./components/_news-same
+  include ./components/_navigation-bottom
+  include ./components/_footer
+  include ./components/_register

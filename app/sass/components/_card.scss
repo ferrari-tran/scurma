@@ -1,0 +1,219 @@
+.card-option {
+  box-shadow: 0px 2px 30px rgba(color(dark), .1);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  > * {
+    flex: 0 0 100%;
+  }
+
+  &-header {
+    background: color(gray-light);
+    overflow: hidden;
+
+    .card-option-title {
+      padding: 1.5rem 1.5rem .8rem 1.5rem;
+      background: color(secondary);
+      color: color(light);
+      font-weight: $font-weight-regular;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2rem;
+        bottom: -2rem;
+        left: 0;
+        background-image: linear-gradient(to right bottom, color(secondary) 0%, color(secondary) 50%, transparent 52%);
+      }
+    }
+
+    .card-option-subtitle {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 2.4rem;
+      padding: 3rem 1.5rem 1rem 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &-body {
+    padding: 1.5rem 0;
+
+    ul {
+      > li {
+        > a {
+          padding: 1rem 1.5rem;
+          color: color(dark);
+          display: block;
+          text-align: center;
+          font-size: 1.8rem;
+          position: relative;
+          overflow: hidden;
+          transition: all .5s $cubic3;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: .5rem;
+            height: 100%;
+            transition: all .3s $cubic3;
+            background: color(secondary);
+            top: 0;
+            left: -.5rem;
+          }
+
+          &:hover {
+            background: color(gray-light);
+
+            &::before {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-footer {
+    text-align: center;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+    .button {
+      background: color(secondary);
+      color: color(light);
+      display: inline-block;
+      padding: 1.2rem 3.2rem;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      position: relative;
+      border: solid .2rem color(secondary);
+      transition: all .3s $cubic3;
+      font-weight: $font-weight-bold;
+
+      &:hover {
+        background: transparent;
+        color: color(secondary);
+      }
+    }
+  }
+
+  &.offer {
+    .card-option-title {
+      background: color(primary);
+
+      &::before {
+        background-image: linear-gradient(to right bottom, color(primary) 0%, color(primary) 50%, transparent 52%);
+      }
+    }
+
+    .card-option-body ul > li > a::before {
+      background: color(primary);
+    }
+
+    .card-option-footer .button {
+      background: color(primary);
+      border-color: color(primary);
+
+      &:hover {
+        color: color(primary);
+        background: transparent;
+      }
+    }
+  }
+}
+
+.card-news {
+  margin-bottom: 1.5rem;
+
+  &-header {
+    margin-bottom: 1.2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+  &-body {
+    > a {
+      color: color(dark);
+      font-family: font(robotoCondensed);
+      line-height: 1.2;
+      display: block;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+
+      &:hover {
+        color: color(primary);
+        transition: all .3s $cubic3;
+      }
+    }
+  }
+
+  &.large {
+    .card-news-body > a {
+      font-size: 1.8rem;
+    }
+  }
+
+  &.small {
+    display: flex;
+
+    .card-news-left {
+      flex: 0 0 13rem;
+      max-width: 13rem;
+      margin-right: 1rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .card-news-body {
+      flex: 0 0 1;
+    }
+
+    .card-news-title {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+  }
+}
+
+.comment {
+  display: flex;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: solid .1rem color(gray);
+
+  &-left {
+    flex: 0 0 5rem;
+    margin-right: 1rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-body {
+    flex: 0 0 1;
+    font-size: 1.4rem;
+
+    .comment-title {
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin-bottom: .5rem;
+    }
+
+    .comment-time {
+      margin-bottom: 0;
+    }
+  }
+}

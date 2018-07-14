@@ -1,0 +1,41 @@
+.section-content {
+  &-header {
+    margin-bottom: 2rem;
+  }
+
+  &-body {
+    border: solid .1rem color(gray);
+    padding: 1.5rem;
+    text-align: justify;
+  }
+}
+
+.section-options {
+  .card-option {
+    height: 100%;
+  }
+
+  &-body {
+    > .row > [class^="col"]:not(:last-child) {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.section-comments {
+  &-body {
+    padding: 1.5rem;
+    border: solid .1rem color(gray);
+    // background: color(gray-light);
+  }
+}
+
+.form-search {
+  input[type=search] {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: solid .1rem color(gray);
+  }
+}

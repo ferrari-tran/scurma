@@ -3,3 +3,9 @@
 @include font-face(font(roboto), "../fonts/Roboto/Roboto-light", 300, lighter, ttf woff woff2);
 @include font-face(font(roboto), "../fonts/Roboto/Roboto-regular", 400, normal, ttf woff woff2);
 @include font-face(font(roboto), "../fonts/Roboto/Roboto-bold", 700, bold, ttf woff woff2);
+
+/* Roboto condensed
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@include font-face(font(robotoCondensed), "../fonts/Roboto_Condensed/RobotoCondensed-Light", 300, lighter, ttf);
+@include font-face(font(robotoCondensed), "../fonts/Roboto_Condensed/RobotoCondensed-Regular", 400, normal, ttf);
+@include font-face(font(robotoCondensed), "../fonts/Roboto_Condensed/RobotoCondensed-Bold", 700, bold, ttf);

@@ -1,0 +1,75 @@
+mixin titleSection(title)
+  h2.title-section&attributes(attributes) !{title}
+
+mixin titleSectionLarge(title)
+  h2.title-section-large&attributes(attributes) !{title}
+
+mixin titlePanel(title)
+  h3.title-panel&attributes(attributes) !{title}
+
+mixin titleInside(title)
+  .title-inside&attributes(attributes)
+    h5 !{title}
+
+mixin link(title, link)
+  - link = link || '#form-register';
+  a.link(href=link title=title)&attributes(attributes) !{title}
+
+mixin image(src, caption)
+  - caption = caption || '';
+  figure.image&attributes(attributes)
+    img(src=src title=caption)
+    - if (caption !== '')
+      figcaption (!{caption})
+
+//- Card option to open form
+  count: Number of process
+  price: Price of all boxs in process
+  content: Content inside card, type of array
+  option: option of packages
+mixin cardOption(count, price, content, option)
+  article.card-option&attributes(attributes)
+    header.card-option-header
+      h4.card-option-title Liệu trình #{count}
+      p.card-option-subtitle #{price}
+    .card-option-body
+      ul
+        each val in content
+          li: a(href="#" title=val) #{val}
+    footer.card-option-footer
+      a.button.button-show-modal(href="#" title="Đặt hàng" data-target-modal=".modal-form-register" data-option=option) Đặt hàng
+
+mixin cardNewsLarge(image, title, time)
+  article.card-news.large
+    .card-news-header
+      img(src=image title=title)
+    .card-news-body
+      a(title=title href="#")
+        h4 !{title}
+      p.text-caption !{time}
+
+mixin cardNewsSmall(image, title)
+  article.card-news.small
+    .card-news-left
+      img(src=image title=title)
+    .card-news-body
+      h6.card-news-title= title
+
+mixin cardNews(image, title)
+  article.card-news
+    .card-news-header
+      img(src=image title=title)
+    .card-news-body
+      a(title=title href="#")
+        h4 !{title}
+
+mixin comment(image, name, caption, time)
+  .comment
+    .comment-left
+      img(src=image title=name)
+    .comment-body
+      h6.comment-title= name
+      p= caption
+      p.comment-time.text-caption= time
+
+

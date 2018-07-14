@@ -13,3 +13,14 @@
     background: #ffaf87;
   }
 }
+
+.page-header {
+  .row > [class^="col"] {
+    display: inline-flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}

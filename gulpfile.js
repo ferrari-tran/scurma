@@ -1,22 +1,23 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
-var cssnano = require('gulp-cssnano');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var del = require('del');
-var runSequence = require('run-sequence').use(gulp);
-var pug = require('gulp-pug');
-var eslint = require('gulp-eslint');
-var watch = require('gulp-watch');
-const autoprefixer = require('gulp-autoprefixer');
+var gulp              = require('gulp');
+var sass              = require('gulp-sass');
+var browserSync       = require('browser-sync').create();
+var useref            = require('gulp-useref');
+var uglify            = require('gulp-uglify');
+var gulpIf            = require('gulp-if');
+var cssnano           = require('gulp-cssnano');
+var imagemin          = require('gulp-imagemin');
+var cache             = require('gulp-cache');
+var del               = require('del');
+var runSequence       = require('run-sequence').use(gulp);
+var pug               = require('gulp-pug');
+var eslint            = require('gulp-eslint');
+var watch             = require('gulp-watch');
+var htmlmin = require('gulp-htmlmin');
+const autoprefixer    = require('gulp-autoprefixer');
 const gulpLoadPlugins = require('gulp-load-plugins');
-const plugins = gulpLoadPlugins();
-var babel = require("gulp-babel");
-const babelMinify = require("gulp-babel-minify");
+const plugins         = gulpLoadPlugins();
+var babel             = require("gulp-babel");
+const babelMinify     = require("gulp-babel-minify");
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -101,12 +102,23 @@ gulp.task('clean:app', function() {
 });
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src(['!app/views/_*.pug', 'app/views/*.pug'])
+  gulp.src(['!app/views/_*.pug', 'app/views/*.pug'])
     .pipe(plugins.plumber())
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest('app'))
+    .pipe(gulp.dest('app'));
+});
+
+gulp.task('minifyhtml', function() {
+  return gulp.src('app/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('copy', function() {
+  return gulp.src('app/thankyou/**/*')
+    .pipe(gulp.dest('dist/thankyou'));
 });
 
 gulp.task('default', function(callback) {
@@ -116,7 +128,7 @@ gulp.task('default', function(callback) {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['sass', 'criticalCSS', 'pug', 'useref', 'lic', 'imagemin', 'fonts'], callback);
+  runSequence('clean:dist', ['copy', 'sass', 'criticalCSS', 'pug', 'useref', 'lic', 'imagemin', 'fonts'], callback);
 });
 
 gulp.task('clean', function(callback) {
