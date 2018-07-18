@@ -11,13 +11,10 @@ section.modal.section-register.modal-form-register
             center.mb-3.mb-md-0
               +titleSection("Miễn phí giao hàng")
           .col-md-6
-            script.
-              var submitted = false;
-            iframe(name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {window.location='thankyou/';}")
-            form.form-outline.form-register(method="POST" id="form-register" target="hidden_iframe" onsubmit="submitted = true;" action="https://script.google.com/macros/s/AKfycbxv-REiX_H446-KAwlMuIfzEjGyBMdm6sYcMp0P/exec")
+            form.form-outline.form-register(id="form-register" name="formRegister" method="POST" enctype="multipart/form-data")
               .form-group
                 label.form-label Họ và tên
-                input.form-control(name="name" type="text" required)
+                input.form-control(name="name" type="text" required id="form-name")
               .form-group
                 label.form-label Số điện thoại
                 input.form-control(name="phone" type="tel" required)

@@ -382,12 +382,10 @@
                 </center>
               </div>
               <div class="col-md-6">
-                <script>var submitted = false;</script>
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {window.location='thankyou/';}"></iframe>
-                <form class="form-outline form-register" method="POST" id="form-register" target="hidden_iframe" onsubmit="submitted = true;" action="https://script.google.com/macros/s/AKfycbxv-REiX_H446-KAwlMuIfzEjGyBMdm6sYcMp0P/exec">
+                <form class="form-outline form-register" id="form-register" name="formRegister" method="POST" enctype="multipart/form-data">
                   <div class="form-group">
                     <label class="form-label">Họ và tên</label>
-                    <input class="form-control" name="name" type="text" required>
+                    <input class="form-control" name="name" type="text" required id="form-name">
                   </div>
                   <div class="form-group">
                     <label class="form-label">Số điện thoại</label>
