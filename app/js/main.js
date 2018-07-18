@@ -55,9 +55,9 @@ function parse_query_string(query) {
   var vars = query.split("&");
   var query_string = {};
   for (var i = 0; i < vars.length; i++) {
-    var pair = vars[i].split("=");
-    var key = decodeURIComponent(pair[0]);
-    var value = decodeURIComponent(pair[1]);
+	var pair  = vars[i].split("=");
+	var key   = decodeURIComponent(pair[0]);
+	var value = decodeURIComponent(pair[1]);
 
     if (typeof query_string[key] === "undefined") {
       query_string[key] = decodeURIComponent(value);
@@ -74,12 +74,12 @@ function parse_query_string(query) {
 
 
 function submitForm(form) {
-	var url = "https://script.google.com/macros/s/AKfycbxv-REiX_H446-KAwlMuIfzEjGyBMdm6sYcMp0P/exec";
+	var url          = "https://script.google.com/macros/s/AKfycbwH7NzczNFqIQOvyim7LKio0WABGQmfs4BUT5S0saa5RYevbCM/exec";
 	var url_location = window.location.href;
-	var params = window.location.search.replace('?', '');
-	var paramsList = parse_query_string(params);
-	var formData = new FormData(form);
-	var xhr = new XMLHttpRequest();
+	var params       = window.location.search.replace('?', '');
+	var paramsList   = parse_query_string(params);
+	var formData     = new FormData(form);
+	var xhr          = new XMLHttpRequest();
 
 	formData.append('url', url_location);
 
